@@ -1,0 +1,20 @@
+{
+    "name": "Qt Docs Syntax Highlighter",
+    "version":  "0.1",
+    "manifest_version": 1,
+
+    "description": "Adds syntax highlighting when viewing docs for the Qt library",
+
+    "content_scripts": [
+        {
+            "css": ["styles/github.css"],
+            "matches": ["http://doc.qt.nokia.com/*"],
+            "js": ["highlight.pack.js", "initHighlight.js"]
+        }
+    ],
+    "permissions": [
+        "tabs", "http://doc.qt.nokia.com/*"
+    ]                                      
+}
+
+            
